@@ -1,3 +1,5 @@
+package dive;
+
 import dive.DiveCommand;
 import java.io.IOException;
 import java.nio.file.Files;
