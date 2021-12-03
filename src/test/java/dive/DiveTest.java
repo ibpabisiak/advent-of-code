@@ -28,8 +28,14 @@ public class DiveTest {
     }
 
     @Test
-    public void testFirstScenario() {
+    public void testPartOne() {
         int correctAnswer = 1635930;
-        Assertions.assertEquals(correctAnswer, Dive.calculate(input1), "Wrong answer");
+        Assertions.assertEquals(correctAnswer, Dive.calculatePartOne(input1), "Wrong answer");
+    }
+
+    @Test
+    public void testPartTwo() {
+        long correctAnswer = 1781819478;
+        Assertions.assertEquals(correctAnswer, Dive.calculatePartTwo(input1), "Wrong answer");
     }
 }

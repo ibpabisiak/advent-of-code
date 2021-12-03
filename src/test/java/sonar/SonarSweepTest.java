@@ -32,13 +32,13 @@ public class SonarSweepTest {
     }
 
     @Test
-    public void shouldCountIncreasesOfInput1() {
+    public void testPartOne() {
         int correctAnswer = 1298;
         Assertions.assertEquals(correctAnswer, SonarSweep.calculateFirstScenario(input1), "Wrong count of increases");
     }
 
     @Test
-    public void shouldCountIncreasesOfInput2() {
+    public void testPartTwo() {
         int correctAnswer = 1248;
         Assertions.assertEquals(correctAnswer, SonarSweep.calculateSecondScenario(input2), "Wrong count of increases");
     }

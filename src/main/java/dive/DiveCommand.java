@@ -10,5 +10,5 @@ import lombok.Setter;
 public class DiveCommand {
 
     private String command;
-    private int value;
+    private long value;
 }
