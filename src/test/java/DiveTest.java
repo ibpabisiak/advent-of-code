@@ -22,10 +22,15 @@ public class DiveTest {
         try (Stream<String> lines = Files.lines(Paths.get(INPUT_FILE_PATH_1))) {
             in = lines.collect(Collectors.toList());
         }
+
+        in.forEach(i -> {
+            String[] s = i.split(" ");
+            input1.add(new DiveCommand(s[0], Integer.parseInt(s[1])));
+        });
     }
 
     @Test
     public void testFirstScenario() {
-
+        input1.forEach(i -> System.out.println(i.getCommand()));
     }
 }
