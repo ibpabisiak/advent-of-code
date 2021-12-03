@@ -7,6 +7,10 @@ temp/
 !**/src/test/**
 /reportsign.der
 
+### Gradle ###
+.gradle
+build
+
 ### STS ###
 .apt_generated
 .classpath
