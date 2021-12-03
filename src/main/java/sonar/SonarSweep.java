@@ -1,3 +1,5 @@
+package sonar;
+
 import java.util.List;
 
 public class SonarSweep {

@@ -1,3 +1,4 @@
+import dive.DiveCommand;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,12 +14,13 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 public class DiveTest {
 
     private static final String INPUT_FILE_PATH_1 = "src/test/resources/dive/input1.txt";
-    private List<String> input1;
+    private List<DiveCommand> input1;
 
     @BeforeAll
     public void setup() throws IOException {
+        List<String> in;
         try (Stream<String> lines = Files.lines(Paths.get(INPUT_FILE_PATH_1))) {
-            input1 = lines.collect(Collectors.toList());
+            in = lines.collect(Collectors.toList());
         }
     }
 
