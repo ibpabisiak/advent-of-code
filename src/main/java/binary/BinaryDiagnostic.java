@@ -7,53 +7,29 @@ public class BinaryDiagnostic {
     private static final String EXAMPLE_ENTRY = "111011101000";
 
     public static long calculatePartOne(List<String> diagnosticReport) {
-        long gammaRate = Long.parseLong(calculateGammaRate(diagnosticReport), 2);
-        long epsilonRate = Long.parseLong(calculateEpsilonRate(diagnosticReport), 2);
+        long gammaRate = Long.parseLong(calculateRate(diagnosticReport, true), 2);
+        long epsilonRate = Long.parseLong(calculateRate(diagnosticReport, false), 2);
         return gammaRate * epsilonRate;
     }
 
-    private static String calculateGammaRate(List<String> diagnosticReport) {
+    private static String calculateRate(List<String> diagnosticReport, boolean isGammaRate) {
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i < EXAMPLE_ENTRY.length(); i++) {
+        for (int i = 0; i < EXAMPLE_ENTRY.length(); i++) {
             int zeroCount = 0;
             int oneCount = 0;
-            for(String entry : diagnosticReport) {
-                if(entry.charAt(i) == '0') {
+            for (String entry : diagnosticReport) {
+                if (entry.charAt(i) == '0') {
                     zeroCount++;
                 } else {
                     oneCount++;
                 }
             }
 
-            if(oneCount > zeroCount) {
+            if ((oneCount > zeroCount & isGammaRate) || (oneCount < zeroCount & !isGammaRate)) {
                 sb.append("1");
-            } else {
+            } else if ((oneCount < zeroCount & isGammaRate) || (oneCount > zeroCount & !isGammaRate)) {
                 sb.append("0");
-            }
-        }
-
-        return sb.toString();
-    }
-
-    private static String calculateEpsilonRate(List<String> diagnosticReport) {
-        StringBuilder sb = new StringBuilder();
-
-        for(int i = 0; i < EXAMPLE_ENTRY.length(); i++) {
-            int zeroCount = 0;
-            int oneCount = 0;
-            for(String entry : diagnosticReport) {
-                if(entry.charAt(i) == '0') {
-                    zeroCount++;
-                } else {
-                    oneCount++;
-                }
-            }
-
-            if(oneCount > zeroCount) {
-                sb.append("0");
-            } else {
-                sb.append("1");
             }
         }
 
