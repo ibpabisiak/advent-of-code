@@ -35,7 +35,7 @@ public class BinaryDiagnosticTest {
 
     @Test
     public void testPartTwo() {
-        long correctAnswer = 0;
+        long correctAnswer = 2990784;
         Assertions.assertEquals(correctAnswer, BinaryDiagnostic.calculatePartTwo(diagnosticReport), "Wrong answer");
     }
 
