@@ -20,7 +20,7 @@ public class BinaryDiagnostic {
         return oxygenGeneratorRating * co2ScrubberRating;
     }
 
-    public static String findCo2ScrubberRating(List<String> diagnosticReport) {
+    private static String findCo2ScrubberRating(List<String> diagnosticReport) {
         for(int i = 0; i < EXAMPLE_ENTRY.length(); i++) {
             char leastCommonValueOnPosition = (findMostCommonValueOnPosition(diagnosticReport, i) == '0') ? '1' : '0';
             diagnosticReport = selectValuesWithCharAtPosition(diagnosticReport, leastCommonValueOnPosition, i);
@@ -33,7 +33,7 @@ public class BinaryDiagnostic {
 
     }
 
-    public static String findOxygenGeneratorRating(List<String> diagnosticReport) {
+    private static String findOxygenGeneratorRating(List<String> diagnosticReport) {
         for(int i = 0; i < EXAMPLE_ENTRY.length(); i++) {
             char mostCommonValueOnPosition = findMostCommonValueOnPosition(diagnosticReport, i);
             diagnosticReport = selectValuesWithCharAtPosition(diagnosticReport, mostCommonValueOnPosition, i);
