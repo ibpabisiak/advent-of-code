@@ -12,6 +12,11 @@ public class BinaryDiagnostic {
         return gammaRate * epsilonRate;
     }
 
+    public static long calculatePartTwo(List<String> diagnosticReport) {
+
+        return 0;
+    }
+
     private static String calculateRate(List<String> diagnosticReport, boolean isGammaRate) {
         StringBuilder sb = new StringBuilder();
 

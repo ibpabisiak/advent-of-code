@@ -33,4 +33,10 @@ public class BinaryDiagnosticTest {
         Assertions.assertEquals(correctAnswer, BinaryDiagnostic.calculatePartOne(diagnosticReport), "Wrong answer");
     }
 
+    @Test
+    public void testPartTwo() {
+        long correctAnswer = 0;
+        Assertions.assertEquals(correctAnswer, BinaryDiagnostic.calculatePartTwo(diagnosticReport), "Wrong answer");
+    }
+
 }
