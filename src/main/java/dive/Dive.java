@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Dive {
 
-    public static final String FORWARD = "forward";
-    public static final String DOWN = "down";
-    public static final String UP = "up";
+    private static final String FORWARD = "forward";
+    private static final String DOWN = "down";
+    private static final String UP = "up";
 
     public static int calculatePartOne(List<DiveCommand> commands) {
         int horizontal = 0;
