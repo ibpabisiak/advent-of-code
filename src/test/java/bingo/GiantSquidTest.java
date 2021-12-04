@@ -53,7 +53,9 @@ public class GiantSquidTest {
                     boards.add(new Board(points));
                     points = new Point[5][5];
                 }
+
             }
+            boards.add(new Board(points));
 
         }
         System.out.println(values);
@@ -63,5 +65,7 @@ public class GiantSquidTest {
     public void testPartOne() {
 //        int correctAnswer = 1635930;
 //        Assertions.assertEquals(correctAnswer, Dive.calculatePartOne(input1), "Wrong answer");
+        GiantSquid.calculatePartOne(boards, values);
+        GiantSquid.calculatePartTwo(boards, values);
     }
 }
